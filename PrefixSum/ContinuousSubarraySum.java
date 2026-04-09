@@ -4,7 +4,7 @@ import java.util.HashMap;
 public class ContinuousSubarraySum {
     public boolean ContinuousSubarraySum(int[] nums, int k){
         HashMap<Integer,Integer> seen=new HashMap<>();
-        seen.put(0,-1);
+        seen.put(0,-1); //-1 because if we get remainder 0 at index 1, then subarray from 0 to 1 is valid
         int prefixSum=0;
         for(int i=0;i<nums.length;i++){
             prefixSum+=nums[i];
@@ -13,7 +13,7 @@ public class ContinuousSubarraySum {
                 rem+=k;
             }
             if(seen.containsKey(rem)){
-                if(i-seen.get(rem)>=2){
+                if(i-seen.get(rem)>=2){ //length we calculate by i-prevIndex
                     return true;
                 }
             }else{

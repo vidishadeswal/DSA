@@ -23,3 +23,4 @@ public class numberOfNiceSubarrays {
         System.out.println(ns.numberOfNiceSubarrays(nums,k)); // Output: 2
     }
 }
+//nice subarray is defined as a subarray that contains exactly k odd numbers
