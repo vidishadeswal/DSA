@@ -17,7 +17,7 @@ public class ContinuousSubarraySum {
                     return true;
                 }
             }else{
-                seen.put(rem,i);
+                seen.put(rem,i); //because we want to find the longest subarray, we only update the index when we see the remainder for the first time
             }
         }
         return false;
